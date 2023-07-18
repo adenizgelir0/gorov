@@ -71,6 +71,10 @@ Num Expr::exec(Num *map)
 				return sin(left->exec(map));
 			case COS:
 				return cos(left->exec(map));
+			case ABS:
+				return abs(left->exec(map));
+			case SQRT:
+				return sqrt(left->exec(map));
 		}
 	}
 	else if(type == VAR)

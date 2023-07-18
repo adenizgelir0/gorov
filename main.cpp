@@ -44,7 +44,7 @@ int main()
 	map['e'] = Num(exp(1));
 	while(n--)
 	{
-		Expr *E = random_expr((std::rand()%2)+2);
+		Expr *E = random_expr((std::rand()%3)+1);
 		double cost = 0;
 		for(int i=0; i<test_data.size(); i++)
 		{
@@ -79,9 +79,9 @@ int main()
 			Expr *E1 = clone_expr(V[rand()%20].expr);
 			Expr *E2 = clone_expr(V[rand()%20].expr);
 			cross_expr(E1,E2);
-			if(rand()%10 == 0)
+			if(rand()%100 == 0)
 				mutate_expr(E1);
-			if(rand()%10 == 0)
+			if(rand()%100 == 0)
 				mutate_expr(E2);
 			double cost=0;
 			for(int i=0; i<test_data.size(); i++)
